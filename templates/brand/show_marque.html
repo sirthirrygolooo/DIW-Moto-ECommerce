@@ -1,7 +1,7 @@
 {% extends 'layouteu.html' %}
 
 {% block title %}
-    <title>afficher les types d'article</title>
+<title>Nos marques de moto</title>
 {% endblock %}
 
 {% block body %}
@@ -14,28 +14,35 @@
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th>id</th><th>marque</th><th>opération</th>
+            <th>id</th>
+            <th>marque</th>
+            <th>opération</th>
         </tr>
     </thead>
     <tbody>
-    {% if brand | length >= 1 %}
+        {% if brand | length >= 1 %}
         {% for ligne in brand %}
-           <tr>
-                  <td>{{ ligne.id }}</td>
-                  <td>{{ ligne.libelle }}</td>
-                  <td>
-                      <a href="/marque/edit?id={{ ligne.id }}">editer</a>&nbsp;
-                      <a href="/marque/delete?id={{ ligne.id }}" >supprimer</a>
-                  </td>
-           </tr>
+        <tr>
+            <td>{{ ligne.id }}</td>
+            <td>{{ ligne.libelle }}
+                <img src="{{ url_for('static', filename= 'images/' +ligne.logo) }}" alt=""
+                    style="max-width: 20px;">
+
+
+            </td>
+            <td>
+                <a href="/marque/edit?id={{ ligne.id }}" class="btn btn-primary">editer</a>&nbsp;
+                <a href="/marque/delete?id={{ ligne.id }}" class="btn btn-primary">supprimer</a>
+            </td>
+        </tr>
         {% endfor %}
-    {% else %}
-            <tr>
-                  <td>
-                      pas de type d'article
-                  </td>
-           </tr>
-    {% endif %}
+        {% else %}
+        <tr>
+            <td>
+                pas de type d'article
+            </td>
+        </tr>
+        {% endif %}
     </tbody>
 </table>
 {% endblock %}

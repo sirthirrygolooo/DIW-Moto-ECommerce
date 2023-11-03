@@ -29,7 +29,7 @@
         <select name="marque_id" id="marque_id">
             <option value="{{ moto.marque_id }}" class="current">{{ brand[moto.marque_id-1]['libelle'] }}</option>
             {% for values in brand %}
-            <option value="{{ values.id }}">{{ values.libelle }}</option>
+            <option value="{{ values.id }}">{{ values.libelle }} </option>
             {%  endfor %}
         </select><br>
         <br>

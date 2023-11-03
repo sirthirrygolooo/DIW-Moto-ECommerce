@@ -59,8 +59,9 @@ def add_marque():
 @app.route('/marque/add', methods=['POST'])
 def valid_add_marque():
     libelle = request.form.get('libelle', '')
-    print(u'marque ajoutée , libellé : ', libelle)
-    message = u'marque ajoutée, libellé : '+libelle
+    logo = request.form.get('logo', '')
+    print(u'marque ajoutée , libellé : ', libelle, ' | logo : ', logo)
+    message = u'marque ajoutée, libellé : '+libelle+' | logo : '+logo
     flash(message, 'alert-success')
     return redirect('/marque/show')
 
@@ -84,8 +85,9 @@ def edit_marque():
 def valid_edit_marque():
     libelle = request.form['libelle']
     id = request.form.get('id', '')
-    print(u'marque modifiée, id: ',id, " libelle :", libelle)
-    message=u'une marque modifiée, id: ' + id + " libelle : " + libelle
+    logo = request.form.get('logo', '')
+    print(u'marque modifiée, id: ',id, " libelle :", libelle, " | logo :", logo)
+    message=u'une marque modifiée, id: ' + id + " libelle : " + libelle + " | logo : " + logo
     flash(message, 'alert-success')
     return redirect('/marque/show')
 
