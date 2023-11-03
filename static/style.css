@@ -1,63 +1,31 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #252525;
-  color : #fff;
-  padding : 10px;
+  font-family: 'Segoe UI';
+  padding: 10px;
 }
 
 nav {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
   text-align: center;
 }
 
-nav a {
-  color : #fff;
-  text-decoration: none;
-  border-bottom : transparent;
-  margin-right : 10px;
-  margin-top : 10px;
+nav a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
-nav a:hover {
-  color : #bdbbbb;
-  border-bottom: 0.5px solid white;
-  transition: border-bottom 2s;
+
+h2 {
+  text-align: center;
 }
 
 body .add {
   text-align: center;
 }
 
-h1,h2,h3 {
-  text-align: center;
-  text-decoration: underline;
-}
-
-table ,tr {
-  color : rgb(167, 164, 164);
-}
-
-th {
-  color : rgb(199, 199, 199);
-}
-
-table a:hover {
-  text-decoration: underline;
-}
-
-
-table a {
-  color : rgb(77, 4, 173);
-}
-
-table a:visited {
-  color : rgb(77,4,173);
-}
-
-label {
-  text-decoration: underline;
-  font-size: larger;
+fieldset {
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
 }
 
 #modifier {
@@ -70,24 +38,23 @@ label {
   cursor: pointer;
   background-color: #252525;
   border: 1px solid #fff;
-  color : #fff;
+  color: #fff;
 }
 
 .flashes {
-    padding: 9px;
-    margin : 9px;
+  padding: 9px;
+  margin: 9px;
 }
 
 .alert-warning {
-    background-color: rgb(255, 0, 0);
-    color : black;
-}
-.alert-success {
-    background-color: #00ff00;
-    color : black;
+  background-color: rgb(255, 0, 0);
+  color: black;
 }
 
-/* Faire que mes cards soient disposées en grilles */
+.alert-success {
+  background-color: #00ff00;
+  color: black;
+}
 
 .mes-cartes {
   display: grid;
@@ -103,10 +70,10 @@ label {
 }
 
 .card {
-  color : black;
-  background-color : whitesmoke;
-  border : 1px solid black;
-  box-shadow : 1px 1px 3px rgb(116, 116, 116);
+  color: black;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px rgb(116, 116, 116);
 }
 
 .mes-cartes .btn {
@@ -115,6 +82,6 @@ label {
 }
 
 .current {
-  background-color: green;
+  background-color: rgb(2, 179, 2);
   border: #252525;
 }
