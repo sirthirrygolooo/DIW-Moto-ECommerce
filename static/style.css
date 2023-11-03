@@ -1,0 +1,120 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #252525;
+  color : #fff;
+  padding : 10px;
+}
+
+nav {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color : #fff;
+  text-decoration: none;
+  border-bottom : transparent;
+  margin-right : 10px;
+  margin-top : 10px;
+}
+
+nav a:hover {
+  color : #bdbbbb;
+  border-bottom: 0.5px solid white;
+  transition: border-bottom 2s;
+}
+
+body .add {
+  text-align: center;
+}
+
+h1,h2,h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+table ,tr {
+  color : rgb(167, 164, 164);
+}
+
+th {
+  color : rgb(199, 199, 199);
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+
+table a {
+  color : rgb(77, 4, 173);
+}
+
+table a:visited {
+  color : rgb(77,4,173);
+}
+
+label {
+  text-decoration: underline;
+  font-size: larger;
+}
+
+#modifier {
+  margin-top: 5px;
+  padding: 3px;
+  border: #252525 1px solid;
+}
+
+#modifier:hover {
+  cursor: pointer;
+  background-color: #252525;
+  border: 1px solid #fff;
+  color : #fff;
+}
+
+.flashes {
+    padding: 9px;
+    margin : 9px;
+}
+
+.alert-warning {
+    background-color: rgb(255, 0, 0);
+    color : black;
+}
+.alert-success {
+    background-color: #00ff00;
+    color : black;
+}
+
+/* Faire que mes cards soient disposées en grilles */
+
+.mes-cartes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 20px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card {
+  color : black;
+  background-color : whitesmoke;
+  border : 1px solid black;
+  box-shadow : 1px 1px 3px rgb(116, 116, 116);
+}
+
+.mes-cartes .btn {
+  margin: 2px;
+
+}
+
+.current {
+  background-color: green;
+  border: #252525;
+}
