@@ -1,28 +1,7 @@
-from flask import Flask, request, render_template, redirect, url_for, abort, flash, session, g
-
-import pymysql.cursors
+from flask import Flask, request, render_template, redirect, flash
 
 app = Flask(__name__)
-app.secret_key = 'phrasegigatopsecrete'
-
-def get_db():
-    if 'db' not in g:
-        g.db = pymysql.connect(
-            host="localhost",
-            user="jbfroehl",
-            password="motdepassehehe",
-            database="BDD_jbfroehl",
-            charset='utf8mb4',
-            cursorclass=pymysql.cursors.DictCursor
-        )
-    return g.db
-
-
-@app.teardown_appcontext
-def teardown_db(exception):
-    db = g.pop('db', None)
-    if db is not None:
-        db.close()
+app.secret_key = 'secretkeyhehe'
 
 marques = [
  {'id' : 1, 'libelle':'Yamaha', 'logo':'logo-yamaha.jpg'},
